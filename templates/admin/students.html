@@ -1,0 +1,68 @@
+{%extends 'admin/adminbase.html'%}
+{%load static%}
+{%block title%}
+<title>Attaches List </title>
+{%endblock%}
+{%block toolkit%} 
+<div class="mt-1 mb-2 d-flex justify-content-between">   <div class="btn-group">
+        <button id="editable-sample_new" onclick="addNew('add')" class="btn border card-icon-warning">
+            <i data-feather="plus"></i>
+        </button>
+    </div>
+</div>
+{%endblock%}
+{%block body%}
+<table id="atom_table" class="compact table border table-light my-1 table-responsive">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Department</th>
+            <th>Institution</th>
+            <th>Phone</th>    
+            <th>Email</th>       
+            <th>Approved</th>
+        </tr>
+    </thead>
+    <tbody>
+{% for st in students%}
+        <tr>
+            <td class="capitals">{{st.student_details.first_name}} {{st.student_details.last_name}}</td>
+            <td>{{st.department.department_name}}</td>
+            <td>{{st.institution}}</td>
+            <td> <a href="tel:{{st.phone_number}}"> {{st.phone_number}}</a></td>
+            <td><a href="mailto:{{st.student_details.email}}">{{st.student_details.email}}</a></td>
+            <td><a href="/adm?id={{st.student_details.id}}&page=students">{{st.approved_count}} Weeks </a></td>
+        </tr>
+{%endfor%}
+    </tbody>
+    <tfoot>
+        <tr>
+            <th>Name</th>
+            <th>Department</th>
+            <th>Institution</th>
+            <th>Phone</th>    
+            <th>Email</th>       
+            <th>Approved</th>
+        </tr>
+    </tfoot>
+</table>
+{%endblock%}
+{%block javascriptlinks%}
+{%endblock%}
+{%block script%}
+<script>
+    $('#atom_table').DataTable({
+        responsive: true,
+        language: {
+            searchPlaceholder: 'Search...',
+            sSearch: '',
+            
+        },dom: 'Blfrtip',
+            buttons: [
+                 'excel', 'pdf', 'print'
+            ]
+    });
+</script>
+{%endblock%}
+</body>
+</html>

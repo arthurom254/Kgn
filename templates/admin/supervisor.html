@@ -1,0 +1,81 @@
+{%extends 'admin/adminbase.html'%}
+{%load static%}
+{%block title%}
+<title>supervisors </title>
+    {%endblock%}
+{%block css%}
+{%endblock%}
+{%block toolkit%} 
+
+<div class="mt-1 mb-2 d-flex justify-content-between">   <div class="btn-group">
+        <button id="editable-sample_new" onclick="addNew('add')" class="btn border card-icon-warning">
+            <i data-feather="plus"></i>
+        </button>
+    </div>
+    
+</div>
+{%endblock%}
+                    
+                    
+
+{%block body%}
+<table id="atom_table" class="table table-light border compact my-1">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Department</th>
+            <th>Phone</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for sup in supervisor %}
+        <tr>
+            <td>{{sup.supervisor_details.first_name}} {{sup.supervisor_details.last_name}}</td>
+            <td>{{sup.department}}</td>
+            <td> <a href="tel:{{sup.phone_number}}"> {{sup.phone_number}}</a></td>
+            <td><a href="mailto:{{sup.supervisor_details.email}}">{{sup.supervisor_details.email}}</a></td>
+        </tr>
+        {%endfor%}
+
+    </tbody>
+    <tfoot>
+        <tr>
+            <th>Name</th>
+            <th>Department</th>
+            <th>Phone</th>
+            <th>Email</th>
+        </tr>
+    </tfoot>
+</table>
+
+
+{%endblock%}
+
+
+
+
+{%block javascriptlinks%}
+
+{%endblock%}
+
+{%block script%}
+<script>
+
+    $('#atom_table').DataTable({
+        responsive: true,
+        language: {
+            searchPlaceholder: 'Search...',
+            sSearch: ''
+        },dom: 'Bfrtip',
+        buttons: [
+             'excel', 'pdf', 'print'
+        ]
+    });
+
+</script>
+{%endblock%}
+
+</body>
+
+</html>

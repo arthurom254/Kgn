@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.2.4/css/buttons.dataTables.min.css">
+</head>
+<body>
+<table id="atom_table">
+<tr>
+<th>Name</th>
+<th>Phone</th>
+<th>Email</th>
+<th>ID</th>
+</tr>
+<tr>
+<td>Mark Mbogo</td>
+<td>0715234170</td>
+<td>Peter@gmail.com</td>
+<td>41125</td>
+</tr>
+<tr>
+<td>John Felix</td>
+<td>0715234170</td>
+<td>Peter@gmail.com</td>
+<td>41100</td>
+</tr>
+<tr>
+<td>Peter Ndumu</td>
+<td>0715234170</td>
+<td>Peter@gmail.com</td>
+<td>41875</td>
+</tr>
+<tr>
+<td>Maxwell Njuguna</td>
+<td>0715234170</td>
+<td>Peter@gmail.com</td>
+<td>776125</td>
+</tr>
+</table>
+<!--Import jQuery before export.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
+    <!--Data Table-->
+    <script type="text/javascript"  src=" https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript"  src=" https://cdn.datatables.net/buttons/1.2.4/js/dataTables.buttons.min.js"></script>
+
+    <!--Export table buttons-->
+    <script type="text/javascript"  src="https://cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js"></script>
+    <script type="text/javascript" src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.24/build/pdfmake.min.js" ></script>
+    <script type="text/javascript"  src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.24/build/vfs_fonts.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.2.4/js/buttons.html5.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.2.1/js/buttons.print.min.js"></script>
+
+<!--Export table button CSS-->
+
+<script>
+$(document).ready(function(){
+$('#atom_table').DataTable({
+                        dom: 'Bfrtip',
+                        buttons: [
+                            'copy', 'csv', 'excel', 'pdf', 'print'
+                        ]
+                    });
+});
+  </script>
+</body>
+</html>

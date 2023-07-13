@@ -1,0 +1,403 @@
+:root {
+    --white: #fbbf;
+    --black: #DA70D6;
+    --navcolor:purple;
+    --blackdialog_background_color:rgba(255, 255, 255, 0.1);
+    --lighthover:#FF8C00;
+    --lighthover2:#ffff;
+    --lighthover3:#BA55D3	;
+    ;
+  }
+
+  /* :root {
+    --white: #ffffff;
+    --black: #0000;
+    --navcolor:#13131d;
+    --blackdialog_background_color:rgba(255, 255, 255, 0.1);
+    --lighthover:#596b8c;
+    --lighthover2:#5d78ff;
+    --lighthover3:#278abb;
+    ;
+  } */
+
+
+
+* {
+    padding: 0;
+    margin: 0;
+    outline: none;
+}
+
+body {
+    background-color: var(--white);
+    font-family: "IBM Plex Sans", sans-serif;
+    background-image: linear-gradient(30deg, #da70d6, transparent);
+}
+.capitals{
+    text-transform: capitalize !important;
+}
+table tr td a{
+    color: var(--black);
+    text-decoration: none;
+
+}
+
+table tr td a:hover{
+    color: var(--lighthover3);
+}
+
+
+.nav-pills li,
+i {
+    font-size: 13px;
+    color: var(--lighthover);
+}
+
+.nav-pills li {
+    border-left: 5px solid transparent;
+}
+
+.nav-pills li a {
+    color: var(--lighthover);
+}
+
+.nav-pills li a:hover {
+    color: var(--lighthover2);
+
+}
+
+.nav-pills li:hover {
+    border-left: 5px solid var(--lighthover2);
+}
+
+.kgn-nav {
+    background-color: var(--navcolor);
+}
+.essy{
+    background-image: linear-gradient(rgba(128, 0, 128, 0.5), orange) !important;
+}
+
+.kgn-topnav-height {
+    height: 60px;
+}
+
+
+
+.form-control:focus,
+.btn:focus {
+    box-shadow: none;
+    border: 1px solid rgb(112, 211, 112);
+}
+
+.kgn-tbl .submit {
+    width: 60px;
+    display: inline;
+}
+
+.kgn-tbl .search {
+    width: calc(100% - 70px);
+    display: inline;
+}
+
+.bg-kgn {
+    background-color: #37599c;
+    position: static;
+}
+
+.span-kgn {
+    padding: 10px;
+    margin-left: 15px;
+    margin-right: 10px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.nav-pills .active {
+    border-left: 5px solid var(--lighthover2);
+    background-color: #0e0e15;
+}
+
+.nav-pills .active a {
+    color: var(--lighthover2);
+}
+
+
+
+.kgn-side-bar {
+    overflow: hidden;
+    position: static;
+    padding: 2px;
+    height: 100vh;
+}
+
+.kgn-side-bar .footer {
+    height: 20vh;
+    background-color:orange ;
+    /* #0e0e15 */
+}
+
+.kgn-tbl-container {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    max-height: 94vh;
+    -ms-overflow-style: none;
+    /*Internet Explorer & Edge*/
+    scrollbar-width: none;
+    /*Firefox*/
+}
+
+/* Chrome Opera and Safari */
+.kgn-tbl-container::-webkit-scrollbar {
+    display: none;
+}
+
+.admin-pannel {
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+/*Sessions in admin*/
+
+.wd-40 {
+    width: 40px
+}
+
+.ht-40 {
+    height: 40px
+}
+
+.mg-r-10 {
+    margin-right: 10px
+}
+
+.pd-sm-l-10 {
+    padding-left: 10px
+}
+
+.tx-dark {
+    color: #101c29
+}
+
+.mg-b-0 {
+    margin-bottom: 0
+}
+
+.tx-semibold {
+    font-weight: 600
+}
+
+.tx-12 {
+    font-size: 12px
+}
+
+.tx-gray-500 {
+    color: #adb5bd
+}
+
+.tx-13 {
+    font-size: 13px
+}
+
+.mg-b-20 {
+    margin-bottom: 20px
+}
+
+.pd-sm-x-20 {
+    padding-left: 20px;
+    padding-right: 20px
+}
+
+.d-sm-block {
+    display: block
+}
+
+.pd-sm-l-10 {
+    padding-left: 10px
+}
+
+.mg-l-auto {
+    margin-left: auto
+}
+
+.tx-rubik {
+    font-family: 'Rubik', sans-serif
+}
+
+.tx-10 {
+    font-size: 10px
+}
+
+.tx-success {
+    color: #23bf08
+}
+
+.tx-warning {
+    color: #f49917
+}
+
+.tx-danger {
+    color: #dc3545
+}
+
+.card-icon-danger {
+    color: #dc3545 !important;
+    background: rgba(220, 53, 69, .10) !important
+}
+
+.card-icon-warning {
+    color: #ffc107 !important;
+    background: rgba(234, 147, 12, 0.1) !important
+}
+
+.card-icon-success {
+    color: #28a745 !important;
+    background: rgba(40, 167, 69, .10) !important
+}
+
+.kgn-a {
+    text-decoration: none;
+}
+
+.kgn-a:hover {
+    color: #28a745;
+}
+
+.tx-20 {
+    font-size: 20px
+}
+
+#addNewSession {
+    display: none;
+}
+
+.tx-sm-18 {
+    font-size: 18px
+}
+
+.tx-md-24 {
+    font-size: 24px
+}
+
+.tx-normal {
+    font-weight: 400
+}
+
+.tx-15 {
+    font-size: 15px
+}
+
+.custom-fieldset {
+    background: var(--white);
+    border: 1px solid orange;
+    padding: 1.5rem;
+    border-radius: .25rem;
+    font-size: 11px
+}
+
+.custom-fieldset label {
+    width: auto;
+    padding: .625rem 1rem;
+    background:var(--white);
+    margin-top: -42px;
+    margin-left: 50px;
+    font-size: 10px;
+    display: block;
+    float: left;
+    text-transform: uppercase
+}
+
+/*end session*/
+
+/*New uper popup*/
+.dialog_action {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--blackdialog_background_color);
+    z-index: 1000;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.kgn-toolkit {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--navcolor);
+}
+
+#atom_table tbody {
+    font-size: 16px;
+    text-transform: capitalize;
+}
+
+#atom_table tbody tr td:nth-child(1) {
+    cursor: pointer;
+}
+
+/*end nwusr popup*/
+
+
+.btn-label-primary {
+    background-color: var(--lighthover2) !important;
+    color: var(--white) !important;
+}
+
+.btn-label-primary:hover {
+    color: var(--black) !important
+}
+
+.btn-label-success:hover {
+    color: var(--black) !important
+}
+
+.btn-label-success {
+    background-color: #2bad0d !important;
+    color: var(--white) !important;
+}
+
+
+
+
+.btn-label-danger {
+    background-color: rgba(253, 57, 122, .1);
+    color: #fd397a !important
+}
+
+.wd-60 {
+    width: 60px
+}
+
+.tx-medium {
+    font-weight: 500
+}
+
+.btn-label-danger:hover {
+    background-color: #f00;
+    color: var(--white) !important
+}
+
+#atom tr:nth-child(odd) td {
+    background-color: #e4f2f2;
+    border: 0
+}
+
+.dataTables_wrapper {
+    color: var(--lighthover2) !important;
+    background: rgba(234, 147, 12, 0.1) !important;
+    padding-top:10px;
+    padding-bottom: 10px;
+
+}
+
+.dataTables_length label select{
+    border: 1px solid purple;
+    color: var(--lighthover2);
+}
+
+/**/
