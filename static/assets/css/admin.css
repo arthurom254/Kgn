@@ -1,9 +1,9 @@
 :root {
     --white: #fbbf;
     --black: #DA70D6;
-    --navcolor:purple;
+    --navcolor:#703C97;
     --blackdialog_background_color:rgba(255, 255, 255, 0.1);
-    --lighthover:#FF8C00;
+    --lighthover:#FF8617;
     --lighthover2:#ffff;
     --lighthover3:#BA55D3	;
     ;
@@ -74,7 +74,8 @@ i {
     background-color: var(--navcolor);
 }
 .essy{
-    background-image: linear-gradient(rgba(128, 0, 128, 0.5), orange) !important;
+    background-image: url(/static/slide.jpg) !important;
+    background-size: cover;
 }
 
 .kgn-topnav-height {
@@ -132,7 +133,7 @@ i {
 
 .kgn-side-bar .footer {
     height: 20vh;
-    background-color:orange ;
+    background-color:#FF8617;
     /* #0e0e15 */
 }
 
