@@ -134,8 +134,8 @@ def updateprofile(request):
         user=User.objects.get(id=request.user.id)
         if user.groups.filter(name="students").exists():
             if request.method == 'POST':
-                fname=request.POST['fname']
-                lname=request.POST['lname']
+                #fname=request.POST['fname']
+                #lname=request.POST['lname']
                 email=request.POST['email']
                 phone=request.POST['phone']
                 institution=request.POST['institution']
@@ -151,8 +151,8 @@ def updateprofile(request):
                 student.institution=Institution(id=institution) 
                 student.save()
                 user=User.objects.get(id=request.user.id)
-                user.first_name=fname
-                user.last_name=lname
+                #user.first_name=fname
+                #user.last_name=lname
                 user.email=email
                 user.save()
                 return redirect('/')  
