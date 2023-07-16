@@ -22,6 +22,8 @@ class Department(models.Model):
 
     def __str__(self):
         return f"{self.department_name} Department"
+    class Meta:
+        ordering=['department_name']
     
 class AttSession(models.Model):
     startdate=models.DateField()

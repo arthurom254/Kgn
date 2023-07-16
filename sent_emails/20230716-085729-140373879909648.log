@@ -1,0 +1,29 @@
+Content-Type: multipart/alternative;
+ boundary="===============7155266230188731713=="
+MIME-Version: 1.0
+Subject: Welcome
+From: webmaster@localhost
+To: gr2@gmail.com
+Date: Sun, 16 Jul 2023 08:57:29 -0000
+Message-ID: <168949784907.261561.1529023705993264484@Atom-F11>
+
+--===============7155266230188731713==
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+
+Welcome to our site
+--===============7155266230188731713==
+Content-Type: text/html; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+
+<h2>Hello Blue Orange,</h2>
+<h3>Welcome to KenGen Attachment site</h3>
+
+<p>Username: blue646</p>
+<p>Password: Password1</p>
+
+--===============7155266230188731713==--
+
+-------------------------------------------------------------------------------

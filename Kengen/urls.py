@@ -4,6 +4,7 @@ from django.contrib.auth import views as auth_views
 urlpatterns = [
     #####################Install##################@############
     path('install', install.new_group, name="install"),
+    path('new', administrator.newProfile, name="new Profile"),
     ##############################################
     path('login', views.login, name="login page"),
     path('logout', views.logout, name="logout"),

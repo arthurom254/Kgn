@@ -1,0 +1,29 @@
+Content-Type: multipart/alternative;
+ boundary="===============1333747506213069461=="
+MIME-Version: 1.0
+Subject: Welcome
+From: webmaster@localhost
+To: y@me.com
+Date: Sun, 16 Jul 2023 14:39:47 -0000
+Message-ID: <168951838718.174970.16630657874499318700@Atom-F11>
+
+--===============1333747506213069461==
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+
+Welcome to our site
+--===============1333747506213069461==
+Content-Type: text/html; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+
+<h2>Hello Esther Wangui,</h2>
+<h3>Welcome to KenGen Attachment site</h3>
+
+<p>Username: esther461</p>
+<p>Password: Password1</p>
+
+--===============1333747506213069461==--
+
+-------------------------------------------------------------------------------

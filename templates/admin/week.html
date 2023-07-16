@@ -2,6 +2,7 @@
 {%load static%}
 {%block css%}
 <style>
+    
 </style>
 {%endblock%}
 {%block toolkit%}
@@ -15,7 +16,7 @@
                     <li class="list-group-item d-flex pd-sm-x-20"> <span class="h5">Weeks</span></li>
                     <form action="" method="post">
                         {%csrf_token%}
-                        {%for week in weeks reversed %}
+                        {%for week in weeks %}
                         <li class="list-group-item d-flex pd-sm-x-20">
                             <div class="d-none d-sm-block">
                                 <span

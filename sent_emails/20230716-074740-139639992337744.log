@@ -1,0 +1,25 @@
+Content-Type: multipart/alternative;
+ boundary="===============1113979500539578163=="
+MIME-Version: 1.0
+Subject: Welcome
+From: webmaster@localhost
+To: okumuarthur496@gmail.com
+Date: Sun, 16 Jul 2023 07:47:40 -0000
+Message-ID: <168949366057.200103.12613473363722855926@Atom-F11>
+
+--===============1113979500539578163==
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+
+Welcome to our site
+--===============1113979500539578163==
+Content-Type: text/html; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+
+<h2>Welcome to our site</h2>
+Arthur
+--===============1113979500539578163==--
+
+-------------------------------------------------------------------------------

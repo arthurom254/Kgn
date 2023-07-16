@@ -5,6 +5,7 @@
     --blackdialog_background_color:rgba(255, 255, 255, 0.1);
     --lighthover:#FF8617;
     --lighthover2:#ffff;
+    
     --lighthover3:#BA55D3	;
     ;
   }
@@ -389,7 +390,7 @@ i {
 }
 
 .dataTables_wrapper {
-    color: var(--lighthover2) !important;
+    color: var(--lighthover3) !important;
     background: rgba(234, 147, 12, 0.1) !important;
     padding-top:10px;
     padding-bottom: 10px;
@@ -398,7 +399,7 @@ i {
 
 .dataTables_length label select{
     border: 1px solid purple;
-    color: var(--lighthover2);
+    color: var(--lighthover3);
 }
 
 /**/

@@ -5,7 +5,8 @@ from django.contrib import messages
 from django.contrib.auth.models import Group, User
 from django.db.models import Count
 from .weeks import get_week_start_end_dates
-
+from .mails import TemplateEmail
+from .username import getUserName
 def dashboard(request):
     if request.user.is_authenticated:
         user=User.objects.get(id=request.user.id)
@@ -18,11 +19,8 @@ def dashboard(request):
             if page == 'students':
                 try:
                     try:
-                        print("Pass test before, sessionid")
                         sessionid=request.GET['sid']
-                        print("Pass test after session id = ", sessionid)
                         students=Student.objects.filter(session=AttSession(id=sessionid)).annotate(approved_count=Count('logs', filter=models.Q(logs__approved='True')))
-                        print("Pass test after students = ", students)
                     except:
                         pass
                     try:
@@ -37,9 +35,7 @@ def dashboard(request):
                             'thisweek':thisweek,
                             'page_id':page,
                             }
-                        #return HttpResponse(approvedlg)
                         print("Pass test context as", context)
-                        # return render(request, 'admin/students1.html', context)
                         return render(request, 'admin/students1.html', context)
                     except:
                         pass
@@ -80,10 +76,12 @@ def dashboard(request):
                         students=Student.objects.filter(session=AttSession.objects.get(active='True')).annotate(approved_count=Count('logs', filter=models.Q(logs__approved='True')))
                     except:
                         students=None
+                    institutions=Institution.objects.all()
                     context={
                         'students':students,
                         'departments':departments,
                         'page_id':page,
+                        'institutions':institutions,
                     }
                     return render(request, 'admin/students.html', context)
             elif page == 'supervisor':
@@ -206,7 +204,7 @@ def addnewuser(request):
                     messages.error(request,"Password does not match")
                     return redirect("/adm?page=%s" % page)
             else:
-                return HttpResponse("Not permitted to create")
+                return redirect('/login')
         return HttpResponse(911)
     else:
         return redirect('/login')
@@ -260,7 +258,40 @@ def addNew(request):
 
 
 def getApprovedStudents(request):
-    
     students=Student.objects.annotate(approved_count=Count('Logs', filter=models.Q(logs__approved='True')))
     
     return HttpResponse(students)
+"""""This is another version of adding new students: it sends an email to the student with username and password: Password 1 is the default password: """
+def newProfile(request):
+    if request.user.is_authenticated:
+        user=User.objects.get(id=request.user.id)
+        if user.groups.filter(name='Admin'):
+            if request.method == 'POST':
+                fname=request.POST['fname']
+                lname=request.POST['lname']
+                department=request.POST['department']
+                institution=request.POST['institution']
+                email=request.POST['email']
+                phone=request.POST['phone_number']
+                username=getUserName(fname)
+                if User.objects.filter(email=email).exists():
+                    messages.info(request, f'user with email {email} already exist')
+                else:
+                    user=User.objects.create_user(username=username,password='Password1', email=email, first_name=fname, last_name=lname )
+                    user.save()
+                    group=Group.objects.get(name='students')
+                    student, created=Student.objects.get_or_create( student_details= User(id=user.id), session=AttSession.objects.get(active='True'),department=Department(id=department), institution=Institution(id=institution), phone_number=phone) 
+                    group.user_set.add(user)
+                    student.save()
+                    template=TemplateEmail(
+                        to=email,
+                        subject="Welcome",
+                        template="welcome",
+                        context={"fname":fname, "lname":lname, "username":username, "pwd":"Password1"},
+                    )
+                    template.send()
+                return redirect('/adm?page=students')
+        else:
+            return redirect('/login')
+    else:
+        return redirect('/login')

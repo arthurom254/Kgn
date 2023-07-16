@@ -1,0 +1,29 @@
+Content-Type: multipart/alternative;
+ boundary="===============2436264501040182900=="
+MIME-Version: 1.0
+Subject: Welcome
+From: webmaster@localhost
+To: okumuarthur496@gmail.com
+Date: Sun, 16 Jul 2023 13:38:31 -0000
+Message-ID: <168951471177.127976.15532292550501758798@Atom-F11>
+
+--===============2436264501040182900==
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+
+Welcome to our site
+--===============2436264501040182900==
+Content-Type: text/html; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+
+<h2>Hello Arthur Omondi,</h2>
+<h3>Welcome to KenGen Attachment site</h3>
+
+<p>Username: arthur80</p>
+<p>Password: Password1</p>
+
+--===============2436264501040182900==--
+
+-------------------------------------------------------------------------------

@@ -6,3 +6,5 @@ def hr(request):
     'session':session,
     }
     return render(request,'hr.html', context)
+
+"""This file is not used anywhere, tell arthur to remove it"""

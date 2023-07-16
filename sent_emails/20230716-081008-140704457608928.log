@@ -1,0 +1,29 @@
+Content-Type: multipart/alternative;
+ boundary="===============5570070594369040834=="
+MIME-Version: 1.0
+Subject: Welcome
+From: webmaster@localhost
+To: felix@gmail.com
+Date: Sun, 16 Jul 2023 08:10:08 -0000
+Message-ID: <168949500886.223166.16261057434107748519@Atom-F11>
+
+--===============5570070594369040834==
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+
+Welcome to our site
+--===============5570070594369040834==
+Content-Type: text/html; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+
+<h2>Hello Felix Omondi,</h2>
+<h3>Welcome to KenGen Attachment site</h3>
+
+<p>Username: Felix</p>
+<p>Password: Password1</p>
+
+--===============5570070594369040834==--
+
+-------------------------------------------------------------------------------
