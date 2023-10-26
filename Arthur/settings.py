@@ -140,8 +140,8 @@ AUTH_GROUP_CHOICES=(
 # EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend'
 # EMAIL_USE_TLS=True
 # EMAIL_HOST='smtp.gmail.com'
-# EMAIL_HOST_USER='kengen@gmail.com'
-# EMAIL_HOST_PASSWORD='Power'
+# EMAIL_HOST_USER=''
+# EMAIL_HOST_PASSWORD=''
 # EMAIL_PORT=587
 
 EMAIL_BACKEND='django.core.mail.backends.filebased.EmailBackend'
